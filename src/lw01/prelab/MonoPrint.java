@@ -1,6 +1,6 @@
 public class MonoPrint extends PrintJob{
     public MonoPrint(String id, int pages){
-        super(id,pages);
+        super(id, pages);
     }
 
     @Override 

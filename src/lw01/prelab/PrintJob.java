@@ -18,7 +18,9 @@ public abstract class PrintJob implements Chargeable {
     public int getPages(){
         return pages;
     }
- 
+
+    @Override
+    public abstract int calculateCharge();
     public int calculateCharge(int copies){
         if (copies <= 0){
             throw new IllegalArgumentException("Copies must be positive");
