@@ -8,7 +8,8 @@ public class MonoPrint extends PrintJob{
         return getPages() * 500;
     }
 
-    @Override public String label(){
+    @Override 
+    public String label(){
         return "Mono";
     }
 }

@@ -7,26 +7,25 @@ public class Main {
     public static void main(String[] args) {
         ArrayList<PrintJob> jobs = new ArrayList<>();
 
-        try {
-            Scanner scanner = new Scanner(new File("jobs.txt"));
+        Scanner scanner = new Scanner(Main.class.getResourceAsStream("jobs.txt"));
 
-            while (scanner.hasNext()) {
-                String type = scanner.next();
-                String id = scanner.next();
-                int pages = scanner.nextInt();
+        while (scanner.hasNext()) {
+            String type = scanner.next();
+            String id = scanner.next();
+            int pages = scanner.nextInt();
 
-                if (type.equals("MONO")) {
-                    jobs.add(new MonoPrint(id, pages));
-                } else if (type.equals("COLOUR")) {
-                    jobs.add(new ColourPrint(id, pages));
-                }
+            PrintJob job;
+
+            if (type.equals("MONO")) {
+                jobs.add(new MonoPrint(id, pages));
+            } else if (type.equals("COLOUR")) {
+                jobs.add(new ColourPrint(id, pages));
             }
 
-            scanner.close();
-
-        } catch (FileNotFoundException e) {
-            System.out.println("jobs.txt not found");
+            jobs.add(job);
         }
+
+        scanner.close();
 
         for (PrintJob job : jobs) {
             System.out.println(job.summary());
