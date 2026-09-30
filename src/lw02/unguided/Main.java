@@ -74,13 +74,11 @@ public class Main {
             if (foodReady && drinkReady) {
 
                 if (foodRecord != null) {
-                    foodRecord[1] =
-                        String.valueOf(Integer.parseInt(foodRecord[1]) - 1);
+                    foodRecord[1] = String.valueOf(Integer.parseInt(foodRecord[1]) - 1);
                 }
 
                 if (drinkRecord != null) {
-                    drinkRecord[1] =
-                        String.valueOf(Integer.parseInt(drinkRecord[1]) - 1);
+                    drinkRecord[1] = String.valueOf(Integer.parseInt(drinkRecord[1]) - 1);
                 }
 
                 successfullyOrders.add(order);
