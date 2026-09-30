@@ -14,9 +14,7 @@ public class Main {
         Queue<String[]> queue = new LinkedList<>();
         Stack<String[]> failed = new Stack<>();
 
-        Scanner scanner = new Scanner(
-            Main.class.getResourceAsStream("orders.txt")
-        );
+        Scanner scanner = new Scanner(Main.class.getResourceAsStream("orders.txt"));
 
         while (scanner.hasNext()) {
             String name = scanner.next();
@@ -91,8 +89,7 @@ public class Main {
         System.out.println("=== Successfully Processed Orders ===");
 
         for (String[] order : successfullyOrders) {
-            System.out.println(order[0] + " " + order[1] + " " + order[2] + " " + order[3]
-            );
+            System.out.println(order[0] + " " + order[1] + " " + order[2] + " " + order[3]);
         }
 
         System.out.println();
@@ -118,8 +115,7 @@ public class Main {
         while (!failed.isEmpty()) {
             String[] order = failed.pop();
 
-            System.out.println(order[0] + " " + order[1] + " " + order[2] + " " + order[3]
-            );
+            System.out.println(order[0] + " " + order[1] + " " + order[2] + " " + order[3]);
         }
     }
 }
