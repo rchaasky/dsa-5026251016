@@ -48,7 +48,7 @@ public class Main {
         for (String result : results) {
             System.out.println(result);
         }
-
+        
         System.out.println();
         System.out.println("===== Final Event Summary =====");
         System.out.println("Registered students : " + registered.size());
