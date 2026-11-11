@@ -100,11 +100,9 @@ public class Main {
             int idx = binarySearch(parcels, target, steps);
 
             if (idx != -1) {
-                System.out.println(target + ": FOUND at index " + idx
-                        + " (steps: " + steps[0] + ")");
+                System.out.println(target + ": FOUND at index " + idx + " (steps: " + steps[0] + ")");
             } else {
-                System.out.println(target + ": NOT FOUND"
-                        + " (steps: " + steps[0] + ")");
+                System.out.println(target + ": NOT FOUND" + " (steps: " + steps[0] + ")");
             }
         }
     }
